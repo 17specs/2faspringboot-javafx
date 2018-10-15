@@ -5,6 +5,9 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -14,21 +17,12 @@
     <children>
         <Pane id="phonePane" fx:id="pane1" prefHeight="270.0" prefWidth="580.0">
             <children>
-                <MenuBar layoutX="1.0" layoutY="3.0" prefHeight="0.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
+                <MenuBar fx:id="menueB1" layoutX="1.0" layoutY="3.0" prefHeight="0.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
                     <menus>
                         <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="File">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="Close" />
-                            </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="Edit">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="Delete" />
-                            </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="Help">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="About" />
+                                <MenuItem fx:id="menpan0" mnemonicParsing="false" onAction="#about0click" text="About 2FA" />
+                        <MenuItem fx:id="aboutNSU0" mnemonicParsing="false" onAction="#aboutNSU0" text="About NSU" />
                             </items>
                         </Menu>
                     </menus>
@@ -45,21 +39,12 @@
         </Pane>
       <Pane id="codePane" fx:id="pane2" prefHeight="270.0" prefWidth="580.0" visible="false">
          <children>
-            <MenuBar layoutY="3.0" prefHeight="22.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
+            <MenuBar fx:id="menueB2" layoutY="3.0" prefHeight="22.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
               <menus>
                 <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem fx:id="menpan1" mnemonicParsing="false" onAction="#about1click" text="About 2FA" />
+                        <MenuItem fx:id="aboutNSU1" mnemonicParsing="false" onAction="#aboutNSU1" text="About NSU" />
                   </items>
                 </Menu>
               </menus>
@@ -72,6 +57,85 @@
                   <Font size="23.0" />
                </font>
             </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="pan3" prefHeight="270.0" prefWidth="580.0" visible="false">
+         <children>
+            <MenuBar fx:id="menueB3" prefHeight="22.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="File">
+                     <items>
+                        <MenuItem fx:id="aboutNSU2" mnemonicParsing="false" onAction="#aboutNSU2" text="About NSU" />
+                        <MenuItem fx:id="menpan2" mnemonicParsing="false" onAction="#about2click" text="About 2FA" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Text fill="WHITE" layoutX="202.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Success!" textAlignment="CENTER" wrappingWidth="176.98307752609253">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <JFXButton id="sendCode" fx:id="demoagain" layoutX="318.0" layoutY="137.0" onAction="#democlick" prefHeight="32.0" prefWidth="122.0" ripplerFill="#225d43" style="-fx-text-fill: #FFF; -fx-background-color: #43B581;" text="See Demo Again" />
+            <JFXButton id="about2fa" fx:id="aboutdemo" layoutX="141.0" layoutY="137.0" onAction="#aboutclick" prefHeight="32.0" prefWidth="122.0" ripplerFill="#225d43" style="-fx-text-fill: #FFF; -fx-background-color: #43B581;" text="About 2FA" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane4" prefHeight="270.0" prefWidth="580.0" visible="false">
+         <children>
+            <MenuBar fx:id="menueB4" prefHeight="22.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
+               <menus>
+                  <Menu fx:id="menpan3" mnemonicParsing="false" onAction="#about3click" style="-fx-background-color: #23272A;" text="File">
+                     <items>
+                        <MenuItem fx:id="aboutNSU3" mnemonicParsing="false" onAction="#aboutNSU3" text="About NSU" />
+                        <MenuItem fx:id="menupan3" mnemonicParsing="false" onAction="#about3click" text="About 2FA" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Text fx:id="about2fatxt" fill="#99aab5" layoutX="14.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two-Factor Authentication is one of the most universal methods of confirming identities online. A user is prompted to login to confirm their identity. Alongside the standard username and password system established by most companies, a user must go through the additional step of authentication by entering a passcode sent through, text, email, or phone call. Two-Factor Authentication is crucial to any modern day account-based service, as it allows users to add an extra step in securing a wide variety of things such as bank account credentials, social media details, or other private information. With each year, cybersecurity has become a more prominent risk as black hat hackers continue to rise. This method of verifying has become an imperative lynchpin to any service that includes meaningful information to customers." wrappingWidth="425.9830722808838" />
+            <JFXButton id="sendCode" fx:id="homescreen" layoutX="440.0" layoutY="216.0" onAction="#backtohomescreen" prefHeight="32.0" prefWidth="122.0" ripplerFill="#225d43" style="-fx-text-fill: #FFF; -fx-background-color: #43B581;" text="Back to Home" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is 2FA?" wrappingWidth="199.9830722808838">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="pane5" prefHeight="270.0" prefWidth="580.0" visible="false">
+         <children>
+            <Separator layoutX="208.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="4.0" />
+            <MenuBar fx:id="menueB5" prefHeight="22.0" prefWidth="580.0" style="-fx-background-color: #23272A;">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-background-color: #23272A;" text="File">
+                     <items>
+                        <MenuItem fx:id="menpan4Home" mnemonicParsing="false" onAction="#menpan4Home" text="Home" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <ImageView fitHeight="123.0" fitWidth="122.0" layoutX="45.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/nsu%20logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="26.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2018 NSU AB." />
+            <Text fill="WHITE" layoutX="290.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NSU 2FA 2018.10.15">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#99aab5" layoutX="290.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Build #IU-2.0, built on October 14, 2018" />
+            <Text fill="#99aab5" layoutX="290.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recomended JRE: 9" wrappingWidth="150.9830722808838" />
+            <Text fill="WHITE" layoutX="290.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributors:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#99aab5" layoutX="309.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="James Latimer" wrappingWidth="95.44530856609344" />
+            <Text fill="#99aab5" layoutX="309.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greg Hornbeck" wrappingWidth="95.44530853629112" />
+            <Text fill="#99aab5" layoutX="310.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ethan Pham-cope" wrappingWidth="109.44530853629112" />
+            <Text fill="#99aab5" layoutX="309.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elias Valle" wrappingWidth="95.44530637562275" />
+            <Text fill="#99aab5" layoutX="309.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanner Preston" wrappingWidth="95.44530637562275" />
          </children>
       </Pane>
     </children>
